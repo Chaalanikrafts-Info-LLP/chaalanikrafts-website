@@ -119,7 +119,7 @@ export default function Home() {
   ];
 
   const stats = [
-    { icon: Users, value: 500, suffix: "+", label: "Clients Served" },
+    { icon: Users, value: 500, suffix: "ssi", label: "Clients Served" },
     { icon: Award, value: 98, suffix: "%", label: "Satisfaction Rate" },
     { icon: Target, value: 150, suffix: "+", label: "Projects Done" },
     { icon: LineChart, value: 25, suffix: "M+", label: "Revenue Generated" }
@@ -130,7 +130,7 @@ export default function Home() {
     { icon: GraduationCap, date: "2022–2023", title: "Educational Initiatives", desc: "Conducted 6–7 free webinars for SSIT students." },
     { icon: Target, date: "Early 2024", title: "Commercial Launch", desc: "Started receiving and delivering client projects." },
     { icon: Calendar, date: "Nov 2024", title: "Official Registration", desc: "Registered as Chaalanikraftsinfo LLP." },
-    { icon: Sprout, date: "Present", title: "Agri-Tech Focus", desc: "Developing innovative solutions for agricultural challenges." }
+    { icon: GraduationCap, date: "Present", title: "Edu-Tech Focus", desc: "Developing innovative solutions for Edu-Tech challenges." }
   ];
 
   return (
@@ -394,7 +394,7 @@ export default function Home() {
         @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(2.5); opacity:0} }
 
         /* ── Section commons ── */
-        section { padding: 100px 0; }
+        section { padding: 60px 0; }
         .container { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
         .section-tag {
           display: inline-flex; align-items: center; gap: 6px;
@@ -553,7 +553,7 @@ export default function Home() {
         .stats-section {
           background: var(--navy);
           position: relative; overflow: hidden;
-          padding: 80px 0;
+          padding: 60px 0;
         }
         .stats-section::before {
           content: '';
@@ -584,7 +584,7 @@ export default function Home() {
         .stat-label { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.5); font-weight: 500; }
 
         /* ── Newsletter ── */
-        .newsletter-section { background: var(--mist); padding: 80px 0; }
+        .newsletter-section { background: var(--mist); padding: 60px 0; }
         .newsletter-box {
           background: white; border-radius: 28px;
           border: 1px solid var(--border);
@@ -689,7 +689,7 @@ export default function Home() {
         /* ── Footer ── */
         .footer {
           background: var(--ink); color: white;
-          padding: 80px 0 32px;
+          padding: 60px 0 32px;
         }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
         .footer-brand-desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; font-weight: 300; margin-top: 16px; margin-bottom: 24px; }
@@ -763,6 +763,12 @@ export default function Home() {
           .footer-grid { grid-template-columns: 1fr; }
           .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
           .newsletter-box { padding: 32px 24px; }
+          .service-panel { padding: 32px 20px; min-height: auto; }
+          .panel-title { font-size: 24px; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+          .panel-desc { font-size: 15px; }
+          .service-tab { padding: 16px 16px; min-width: 200px; flex-shrink: 0; }
+          .services-layout { width: 100%; max-width: 100vw; overflow: hidden; }
+          .service-tabs { margin-right: -20px; padding-right: 20px; }
         }
       `}</style>
 
@@ -826,16 +832,6 @@ export default function Home() {
               <a href="#about" className="btn-ghost">
                 Our Story
               </a>
-            </div>
-            <div className="hero-trust">
-              <div className="avatars">
-                {['A','B','C','D'].map((l) => (
-                  <div key={l} className="avatar">{l}</div>
-                ))}
-              </div>
-              <p className="trust-text">
-                Trusted by <strong>500+</strong> happy clients
-              </p>
             </div>
           </div>
 
@@ -904,7 +900,7 @@ export default function Home() {
           <div style={{ textAlign: 'center', maxWidth: 560, margin: '0 auto' }}>
             <div className="section-tag">Our History</div>
             <h2 className="section-h2">A journey of bold<br />decisions</h2>
-            <p className="section-sub" style={{ marginTop: 16 }}>From a startup at SSIT to a forward-thinking agri-tech innovator.</p>
+            <p className="section-sub" style={{ marginTop: 16 }}>From a startup at SSIT to a forward-thinking Edu-Tech & Agri-Tech innovator.</p>
           </div>
           <div className="timeline-wrap">
             <div className="tl-line" />
@@ -969,7 +965,7 @@ export default function Home() {
       </section>
 
       {/* ── STATS ── */}
-      <section className="stats-section">
+      {/* <section className="stats-section">
         <div className="container">
           <div className="stats-grid">
             {stats.map((stat, i) => (
@@ -983,7 +979,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── NEWSLETTER ── */}
       <section className="newsletter-section">
@@ -1019,7 +1015,7 @@ export default function Home() {
               {[
                 { icon: Phone, label: "Phone", value: "+91 97310 67126" },
                 { icon: Mail, label: "Email", value: "info@chaalanikrafts.in" },
-                { icon: MapPin, label: "Location", value: "SSIT Campus, Innovation Hub" }
+                { icon: MapPin, label: "Location", value: "SSAHE INNOVATION AND INCUBATION COUNCIL, Scolar building, SSIT Campus, Tumkuru" }
               ].map((item, i) => (
                 <div key={i} className="ci-row">
                   <div className="ci-icon-wrap"><item.icon size={18} /></div>
@@ -1087,7 +1083,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="footer-brand-desc">
-                Cutting-edge IT and Agri-Tech solutions that empower businesses to thrive in a rapidly digitizing world.
+                Cutting-edge IT, Edu-Tech and Agri-Tech solutions that empower businesses to thrive in a rapidly digitizing world.
               </p>
              
             </div>
@@ -1106,9 +1102,8 @@ export default function Home() {
             <div>
               <div className="footer-col-title">Reach Us</div>
               <div className="footer-contact-row"><Phone size={14} /><span>+91 97310 67126</span></div>
-              <div className="footer-contact-row"><Phone size={14} /><span>+91 97310 67126</span></div>
               <div className="footer-contact-row"><Mail size={14} /><span>info@chaalanikrafts.in</span></div>
-              <div className="footer-contact-row"><MapPin size={14} /><span>SSIT Campus, Innovation Hub</span></div>
+              <div className="footer-contact-row"><MapPin size={14} /><span>SSAHE INNOVATION AND INCUBATION COUNCIL, Scolar building, SSIT Campus, Tumkuru</span></div>
             </div>
           </div>
           <div className="footer-bottom">
